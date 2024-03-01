@@ -8,6 +8,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  void _abrirEmpresa() {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,12 +20,47 @@ class _HomePageState extends State<HomePage> {
       body: Container(
         padding: const EdgeInsets.all(16),
         child: Column(
-          children: [
-            Row(
-              children: <Widget>[
-                Image.asset('assets/images/logo.png'),
-                const Padding(padding: EdgeInsets.only(top: 31))
-              ],
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Image.asset('assets/images/logo.png'),
+            Padding(
+              padding: const EdgeInsets.only(top: 32),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: _abrirEmpresa,
+                    child: Image.asset('assets/images/menu_empresa.png'),
+                  ),
+                  Container(
+                    width: 80,
+                  ),
+                  GestureDetector(
+                    onTap: _abrirEmpresa,
+                    child: Image.asset('assets/images/menu_servico.png'),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 50),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: _abrirEmpresa,
+                    child: Image.asset('assets/images/menu_cliente.png'),
+                  ),
+                  Container(
+                    width: 80,
+                  ),
+                  GestureDetector(
+                    onTap: _abrirEmpresa,
+                    child: Image.asset('assets/images/menu_contato.png'),
+                  ),
+                ],
+              ),
             )
           ],
         ),
