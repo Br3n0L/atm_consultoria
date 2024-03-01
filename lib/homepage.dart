@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
             Row(
               children: <Widget>[
                 Image.asset('assets/images/logo.png'),
-                const Padding(padding: EdgeInsets.only(top: 32))
+                const Padding(padding: EdgeInsets.only(top: 31))
               ],
             )
           ],
