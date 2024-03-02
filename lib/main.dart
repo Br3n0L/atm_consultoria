@@ -1,4 +1,4 @@
-import 'package:atm_consultoria/homepage.dart';
+import 'package:atm_consultoria/src/views/homepage.dart';
 import 'package:flutter/material.dart';
 
 void main() {

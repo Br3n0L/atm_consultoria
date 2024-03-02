@@ -1,3 +1,7 @@
+import 'package:atm_consultoria/src/views/client_page.dart';
+import 'package:atm_consultoria/src/views/company_page.dart';
+import 'package:atm_consultoria/src/views/contact_page.dart';
+import 'package:atm_consultoria/src/views/service_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -8,7 +12,26 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  void _abrirEmpresa() {}
+  void _openCompany() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (contex) => const CompanyPage()));
+  }
+
+  void _openService() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (contex) => const servicePage()));
+  }
+
+  void _openClient() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (contex) => const ClientPage()));
+  }
+
+  void _openContact() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (contex) => const ContactPage()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,14 +53,14 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   GestureDetector(
-                    onTap: _abrirEmpresa,
+                    onTap: _openCompany,
                     child: Image.asset('assets/images/menu_empresa.png'),
                   ),
                   Container(
                     width: 80,
                   ),
                   GestureDetector(
-                    onTap: _abrirEmpresa,
+                    onTap: _openService,
                     child: Image.asset('assets/images/menu_servico.png'),
                   ),
                 ],
@@ -49,14 +72,14 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
                   GestureDetector(
-                    onTap: _abrirEmpresa,
+                    onTap: _openClient,
                     child: Image.asset('assets/images/menu_cliente.png'),
                   ),
                   Container(
                     width: 80,
                   ),
                   GestureDetector(
-                    onTap: _abrirEmpresa,
+                    onTap: _openContact,
                     child: Image.asset('assets/images/menu_contato.png'),
                   ),
                 ],
